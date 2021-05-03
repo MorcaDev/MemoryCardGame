@@ -30,7 +30,11 @@ body{
         width: 100%;
         height: 100%;
         border-radius: 15px;
-        border: dashed rgb(207, 40, 40);
+        border: dashed rgb(209, 24, 24);
+    }
+    .game__piece img:hover{
+        border: solid rgb(231, 16, 16);
+        box-shadow: 0px 0px 20px black;
     }
 /*--------------------------------*/
 .menu{
@@ -54,7 +58,12 @@ body{
         width: 28%;
         height: 45%;
         border-radius: 50%;
-        border : solid red 2px;
+        border : solid black 2px;
+        opacity:  0.6;
+    }
+    .cards-container img:hover{
+        border: double black 6px;
+        opacity:  1;
     }
     .cards-container div{
         width: 16%;
@@ -84,3 +93,17 @@ body{
         border-radius: 10px;
         border: double black 6px;
     }
+    .menu-buttons button:hover{
+        border: double white 6px;
+        background-color: black;
+        color: white;
+    }
+
+/*clases a agregar desde JS*/
+.InvisibiltyPieces{
+    visibility: hidden;
+}
+.NoHoverCards:hover{
+    border : solid black 2px;
+    opacity:  0.6;
+}
