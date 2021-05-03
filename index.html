@@ -11,6 +11,78 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+    <main class="game">
+        <!--1st row-->
+        <div class="game__piece" id="lvl7A" >
+            <img src="./Sources/reversePiece.jpg">
+        </div>
+        <div class="game__piece" id="lvl4A">
+            <img src="./Sources/reversePiece.jpg">
+        </div>
+        <div class="game__piece" id="lvl3A">
+            <img src="./Sources/reversePiece.jpg">
+        </div>
+        <div class="game__piece" id="lvl4B">
+            <img src="./Sources/reversePiece.jpg">
+        </div>
+        <div class="game__piece" id="lvl7B">
+            <img src="./Sources/reversePiece.jpg">
+        </div>
+    
+        <!--2nd row-->
+        <div class="game__piece" id="lvl6A">
+            <img src="./Sources/reversePiece.jpg">
+        </div>
+        <div class="game__piece" id="lvl1A">
+            <img src="./Sources/reversePiece.jpg">
+        </div>
+        <div class="game__piece" id="lvl1B">
+            <img src="./Sources/reversePiece.jpg">
+        </div>
+        <div class="game__piece" id="lvl1C">
+            <img src="./Sources/reversePiece.jpg">
+        </div>
+        <div class="game__piece" id="lvl6B">
+            <img src="./Sources/reversePiece.jpg">
+        </div>
+        
+        <!--3rd row-->
+        <div class="game__piece" id="lvl8A">
+            <img src="./Sources/reversePiece.jpg">
+        </div>
+        <div class="game__piece" id="lvl5A">
+            <img src="./Sources/reversePiece.jpg">
+        </div>
+        <div class="game__piece" id="lvl2A">
+            <img src="./Sources/reversePiece.jpg">
+        </div>
+        <div class="game__piece" id="lvl5B">
+            <img src="./Sources/reversePiece.jpg">
+        </div>
+        <div class="game__piece" id="lvl8B">
+            <img src="./Sources/reversePiece.jpg">
+        </div>
+        
+    </main>
+    <aside class="menu">
+        <div class="menu-cards">
+            <div class="cards-container">
+                <div></div>
+                <img src="./Sources/oneImage.jpg" class="cards" id="card1">
+                <img src="./Sources/twoImage.jpg" class="cards" id="card2">
+                <img src="./Sources/threeImage.jpg" class="cards" id="card3" >
+                <img src="./Sources/fourImage.jpg" class="cards" id="card4">
+                <img src="./Sources/fiveImage.jpg" class="cards" id="card5">
+                <img src="./Sources/sixImage.jpg" class="cards" id="card6">
+                <div></div>
+            </div>
+        </div>
+        <span class="menu--span"></span>
+        <div class="menu-buttons">
+            <button onclick="newGame()" id="buttonS"><strong>Start</strong></button>
+            <button onclick="nextLevel()" id="buttonNG"><strong>New Game</strong></button>
+        </div>
+    </aside>
     <script src="script.js"></script>
 </body>
 </html>
