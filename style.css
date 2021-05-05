@@ -53,7 +53,7 @@ body{
         height: 90%;
         /*desconoce el espacio de separacion entre filas*/
     }
-    .cards-container img{
+    .cards{
         padding: 0px 2.5px;
         width: 28%;
         height: 45%;
@@ -61,9 +61,9 @@ body{
         border : solid black 2px;
         opacity:  0.6;
     }
-    .cards-container img:hover{
-        border: double black 6px;
-        opacity:  1;
+    .cards-container .cards:hover{
+        border: dashed red 5px;
+        opacity: 1;
     }
     .cards-container div{
         width: 16%;
@@ -103,7 +103,9 @@ body{
 .InvisibiltyPieces{
     visibility: hidden;
 }
-.NoHoverCards:hover{
-    border : solid black 2px;
-    opacity:  0.6;
+
+/* -> Para validación cards*/
+.PlusCard{
+    border: dashed red 5px;
+    opacity: 1;
 }
