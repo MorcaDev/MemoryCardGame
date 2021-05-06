@@ -109,3 +109,8 @@ body{
     border: dashed red 5px;
     opacity: 1;
 }
+.PlusButton{
+    border: double white 6px;
+    background-color: black;
+    color: white;
+}
