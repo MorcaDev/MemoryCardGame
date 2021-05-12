@@ -15,25 +15,35 @@ body{
 }
 /*--------------------------------*/
 .game{
+    position: relative;
     display: flex;
     flex-flow: row wrap;
     width: 65%;
     height: 100%;
     padding: 10px;
 }
-.game__piece{
-    padding: 5px;
-    width: 20%;
-    height: 33%;
+.game .count{
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background: url("./Sources/3sgIMG.png") no-repeat center rgba(0, 0, 0, 0.568);
+    background-size: contain;
+    color: black;
 }
-    .game__piece img{
-        width: 100%;
-        height: 100%;
-        border-radius: 15px;
-        border: dashed rgb(209, 24, 24);
-    }
-    .game__piece img:hover{
-        border: solid rgb(231, 16, 16);
+.game__piece{
+    margin: 0px 5px;
+    width: 18%;
+    height: 33%;
+    border-radius: 25px;
+    border: dotted  rgb(209, 24, 24);
+    background: url("./Sources/reversePiece.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+    .game__piece:hover{
+        border: solid 6px rgb(209, 24, 24);
         box-shadow: 0px 0px 20px black;
     }
 /*--------------------------------*/
@@ -100,8 +110,38 @@ body{
     }
 
 /*clases a agregar desde JS*/
+
+/* -> para las piesas*/
 .InvisibiltyPieces{
     visibility: hidden;
+}
+.True1{
+    background: url("./Sources/oneImage.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+.True2{
+    background: url("./Sources/twoImage.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+.True3{
+    background: url("./Sources/threeImage.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+.True4{
+    background: url("./Sources/fourImage.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+.True5{
+    background: url("./Sources/fiveImage.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+.True6{
+    background: url("./Sources/sixImage.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+.False{
+    background: url("./Sources/false.jpg")no-repeat center;
+    background-size: 100% 100%;
 }
 
 /* -> Para validación cards*/
