@@ -18,13 +18,15 @@ let lvl8B = document.getElementById("lvl8B");
 let piecesForLevel = [];
 
 let piecesValidation = [];
-let  isTrue ;
-let  zero = 0;
+let isTrue ;
+let zero = 0;
+
+let cardImage;
 
 let lvl = 1;
 
 let derrote = false;
-let question = undefined;
+let question = false;
 
 //buttons
 const buttonS   = document.getElementById("buttonS");
@@ -116,10 +118,40 @@ function printButtonS(ev){
     if(cardsArray.length != 0 && lvl == 1){
         clickS = true;
         buttonS.removeEventListener("click",printButtonS)
+
+        setCard();
+
         game();
     }else{
         alert("choose a card please");
         buttonS.classList.remove("PlusButton")
+    }
+}
+
+function setCard(){
+    cardImage = cardsArray[0];
+
+    switch(cardImage.id){
+        case "card1":
+            cardImage = "True1";
+            break;
+        case "card2":
+            cardImage = "True2";
+            break;
+        case "card3":
+            cardImage = "True3";
+            break;
+        case "card4":
+            cardImage = "True4";
+            break;
+        case "card5":
+            cardImage = "True5";
+            break;
+        case "card6":
+            cardImage = "True6";
+            break;
+        default:
+            break;
     }
 }
 
@@ -130,8 +162,6 @@ function printButtonNG(ev){
     if(derrote){
 
         deletingClasses();
-
-        piecesForLevel = [];
 
         question = confirm("Do you want to change your kind of cards?");
 
@@ -145,6 +175,7 @@ function printButtonNG(ev){
             buttonNG.removeEventListener("click",printButtonNG);
             
         }else{
+            buttonNG.classList.remove("PlusButton")
             game();
         }
     }else{
@@ -156,6 +187,8 @@ function printButtonNG(ev){
 
 function thereIsACard(ev){
     if(cardsArray.length != 0){
+        setCard();
+        buttonNG.classList.add("PlusButton");
         game();
     }else{
         alert("Choose one please");
@@ -278,7 +311,7 @@ function flipFrontPieces(){
         if(i%2 === 0){
             v.classList.add("False");
         }else{
-            v.classList.add("True");
+            v.classList.add(cardImage);
         }
     });
 }
@@ -290,7 +323,7 @@ function flipReversePieces(){
                 if(i%2 === 0){
                     v.classList.remove("False");
                 }else{
-                    v.classList.remove("True");
+                    v.classList.remove(cardImage);
                 }
             });
             resolve(); 
@@ -389,31 +422,31 @@ async function rightAnswer(ev){
 function rightAddRelation(data){
         switch(data.target.id){
             case "lvl1B":
-                lvl1B.classList.add("True");
+                lvl1B.classList.add(cardImage);
                 piecesValidation[0] = lvl1B;
                 break;   
             case "lvl2A":
-                lvl2A.classList.add("True");
+                lvl2A.classList.add(cardImage);
                 piecesValidation[1] =lvl2A
                 break;                        
             case "lvl4A":
-                lvl4A.classList.add("True");
+                lvl4A.classList.add(cardImage);
                 piecesValidation[2] =lvl4A
                 break;    
             case "lvl5A":
-                lvl5A.classList.add("True");
+                lvl5A.classList.add(cardImage);
                 piecesValidation[3] =lvl5A
                 break;    
             case "lvl6A":
-                lvl6A.classList.add("True");
+                lvl6A.classList.add(cardImage);
                 piecesValidation[4] =lvl6A
                 break;   
             case "lvl7A":
-                lvl7A.classList.add("True");
+                lvl7A.classList.add(cardImage);
                 piecesValidation[5] =lvl7A
                 break;   
             case "lvl8A":
-                lvl8A.classList.add("True");
+                lvl8A.classList.add(cardImage);
                 piecesValidation[6] =lvl8A;
                 break;   
             default:
@@ -427,7 +460,7 @@ function rightRemoveRelation(){
         setTimeout(() => {
 
             piecesValidation.map((v,i,a)=>{
-                v.classList.remove("True");
+                v.classList.remove(cardImage);
             });
 
             resolve();
@@ -448,12 +481,8 @@ function deletingEvents(){
 }
 
 function deletingClasses(){
-    piecesForLevel.map((v,i,a)=>{
-        if(i%2 === 0){
-            v.classList.remove("False")
-        }else{
-            v.classList.remove("True")
-        }
+    cardsArray.map((v,i,a)=>{
+        v.classList.remove("PlusButton")
     });
 }
 
