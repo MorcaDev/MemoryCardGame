@@ -6,4 +6,180 @@
 html{
     font-size: 62.5%;
 }
+body{
+    width: 100%;
+    min-width: 320px;
+}
 /*---------------*/
+.firstChart{
+    /*position: absolute;
+    left: 0px;
+    top: 0px;*/
+    min-width: 320px;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: rgb(65, 189, 148);
+}
+.myBrand{
+    display: block;
+    padding: 10px;
+    font-size: 2.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-shadow: 2px 3px 2px black;
+}
+.firstChart__description{
+    width: 60%;
+    height: auto;
+    margin: 40px auto;
+    padding: 40px 20px;
+    border: solid white 8px;
+    border-radius: 8px;
+}
+.firstChart__description p{
+    font-size: 3rem;
+    color:  black;
+    line-height: 3.5rem;
+    text-align: center;
+}
+.button1st{
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    margin: 10px auto;
+    border: solid black 4px;
+    border-radius: 50%;
+    background: url("./Sources/checkIMG.png") no-repeat center;
+    background-size: 100%;
+}
+.button1st:hover{
+    border: solid white 6px;
+}
+/*-------------------*/
+.secondChart{
+    /*position: absolute;
+        left: 0px;
+        top: 0px;*/
+    min-width: 320px;
+    width: 100%;
+    height: 600px; /*referencia*/
+    display: flex;
+    flex-flow: row nowrap;
+}
+.secondChart__description{
+    width: 65%;
+    height: 100%;
+    background-color: rgb(44, 83, 70);
+}
+.secondChart__description p{
+    margin-top: 50px;
+    margin-bottom: 300px;
+    /*lo de arrib es para jugar con las dimensiones en solo un archivo*/
+    margin-left: 50%;
+    width: 45%;
+    padding: 5px 10px;
+    border: solid white 8px;
+    border-radius: 15px;
+    font-size: 2.5rem;
+    color:  black;
+    line-height: 3.5rem;
+    text-align: center;
+}
+.secondChart__column{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.secondChart__column .whiteSpace{
+    width: 100%;
+    height: 60%;
+    background-color: rgba(44, 83, 70, 0.25);
+}
+.secondChart__column .continueSpace{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+    background-color: rgb(44, 83, 70);
+}
+.button2nd{
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    border: solid black 4px;
+    border-radius: 50%;
+    background: url("./Sources/checkIMG.png") no-repeat center;
+    background-size: 100%;
+}
+.button2nd:hover{
+    border: solid white 6px;
+}
+/*--------------------*/
+.therdChart{
+    /*position: absolute;
+        left: 0px;
+        top: 0px;*/
+    min-width: 320px;
+    width: 100%;
+    height: 600px; /*referencia*/
+    display: flex;
+    flex-flow: row nowrap;
+}
+.therdChart__description{
+    width: 65%;
+    height: 100%;
+    background-color: rgb(79, 83, 44);
+}
+.therdChart__description p{
+    margin-top: 350px;
+    margin-bottom: 50px;
+    /*lo de arrib es para jugar con las dimensiones en solo un archivo*/
+    margin-left: 30%;
+    width: 65%;
+    padding: 5px 10px;
+    border: solid white 8px;
+    border-radius: 15px;
+    font-size: 2.5rem;
+    color:  black;
+    line-height: 3.5rem;
+    text-align: center;
+}
+.therdChart__column{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.therdChart__column .continueSpace{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60%;
+    background-color: rgb(79, 83, 44);
+}
+.button3rd{
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    border: solid black 4px;
+    border-radius: 50%;
+    background: url("./Sources/checkIMG.png") no-repeat center;
+    background-size: 100%;
+}
+.button3rd:hover{
+    border: solid white 6px;
+}
+.therdChart__column .whiteSpace{
+    width: 100%;
+    height: 40%;
+    background-color: rgba(79, 83, 44,0.25);
+}
+/*------------*/
+.Disapper{
+    display: none;
+}
