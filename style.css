@@ -11,10 +11,12 @@ body{
     display: flex;
     flex-flow: row wrap;
     min-width: 320px;
+    max-width: 1800px; /*chek this for responve design*/
     margin: 0px auto;
     width: 100vw;
     height: 100vh;
     background:  black ;
+    background: linear-gradient(to bottom , aqua , black);
 }
 /*----------------------------------------------------------*/
 .firstChart{
@@ -239,4 +241,168 @@ body{
 }
 .Apper{
     visibility: initial;
+}
+/*--------------------------------*/
+.game{
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    width: 65%;
+    height: 100%;
+    padding: 1%;
+}
+.game .count{
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background: url("./Sources/3sgIMG.png") no-repeat center rgba(0, 0, 0, 0.568);
+    background-size: contain;
+    color: black;
+}
+.game__piece{
+    margin: 0px 1%;
+    width: 18%;
+    height: 33%;
+    border-radius: 10px;
+    background: url("./Sources/reversePiece.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+    .game__piece:hover{
+        border: solid 2px white;
+        box-shadow: 0px 0px 20px white;
+    }
+/*--------------------------------*/
+.menu{
+    width: 33%;
+    height: 100%;
+}
+.menu-cards{
+    width: 100%;
+    height: 50%;
+}
+    .menu-cards .cards-container{
+        display: flex;
+        flex-flow: row wrap;
+        padding: 5%;
+        width: 100%;
+        height: 100%;
+    }
+    .cards{
+        width: 30%;
+        height: 40%;
+        border-radius: 50%;
+        border : solid white 2px;
+        opacity:  0.8;
+    }
+    .cards-container .c6{
+        margin-right: 10%;
+    }
+    .cards-container .c1{
+        margin-left: 10%;
+    }
+    .cards-container .cards:hover{
+        border: solid red 2px;
+        opacity: 1;
+    }
+.menu-spanContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+}
+    .menu-span{
+        display: block;
+        width: 50%;
+        height: 6px;
+        background-color: white;
+        border: double black 6px;
+        border-radius: 15px;
+    }
+.menu-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    width: 100%;
+    height: 40%;
+}
+    .menu-buttons button{
+        display: block;
+        width: 100px;
+        height: 30px;
+        padding: 2.5px;
+        font-size: 1.3rem;
+        border-radius: 10px;
+        border: solid black 2.5px;
+        background: linear-gradient(to bottom , aqua , black);
+    }
+    .menu-buttons .buttonException{
+        margin-bottom: 35px;
+    }
+    .menu-buttons button:hover{
+        border: solid white 2.5px;
+        color: white;
+    }
+
+/*clases a agregar desde JS*/
+
+/* -> para las piesas*/
+.InvisibiltyPieces{
+    visibility: hidden;
+}
+.True1{
+    border: solid black 2px;
+    background: url("./Sources/oneImageDesktop.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+.True2{
+    border: solid black 2px;
+    background: url("./Sources/twoImageDesktop.jpg") no-repeat center;
+    background-size: 100% 100%;
+    box-shadow: 0px 0px 20px black;
+}
+.True3{
+    border: solid black 2px;
+    background: url("./Sources/threeImageDesktop.jpg") no-repeat center;
+    background-size: 100% 100%;
+    box-shadow: 0px 0px 20px black;
+}
+.True4{
+    border: solid black 2px;
+    background: url("./Sources/fourImageDesktop.jpg") no-repeat center;
+    background-size: 100% 100%;
+    box-shadow: 0px 0px 20px black;
+}
+.True5{
+    border: solid black 2px;
+    background: url("./Sources/fiveImageDesktop.jpg") no-repeat center;
+    background-size: 100% 100%;
+    box-shadow: 0px 0px 20px black;
+}
+.True6{
+    border: solid black 2px;
+    background: url("./Sources/sixImageDesktop.jpg") no-repeat center;
+    background-size: 100% 100%;
+    box-shadow: 0px 0px 20px black;
+}
+.False{
+    border: solid black 2px;
+    background: url("./Sources/false.jpg")no-repeat center;
+    background-size: 100% 100%;
+    box-shadow: 0px 0px 20px black;
+}
+
+/* -> Para validación cards*/
+.PlusCard{
+    border: solid red 2px;
+    opacity: 1;
+}
+.PlusButton{
+    border: double white 6px;
+    background-color: black;
+    color: white;
 }
