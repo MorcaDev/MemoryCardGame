@@ -26,6 +26,7 @@ body{
     min-width: 320px;
     width: inherit;
     height: inherit;
+    min-height: 500px;
     display: flex;
     flex-flow: column nowrap;
     background: url("./Sources/mainBackGround.png") no-repeat  center;
@@ -83,6 +84,7 @@ body{
     flex-flow: row nowrap;
     background: url("./Sources/mainBackGround.png") no-repeat  center;
     background-size: 100% 100%;
+    min-height: 500px;
 
 
     visibility: hidden;
@@ -139,6 +141,7 @@ body{
     flex-flow: row nowrap;
     background: url("./Sources/mainBackGround.png") no-repeat  center;
     background-size: 100% 100%;
+    min-height: 500px;
 
     visibility: hidden;
 
