@@ -354,7 +354,7 @@ body{
     visibility: hidden;
 }
 .Apper{
-    visibility: initial;
+    visibility: visible;
 }
 
 /* -> para las piesas*/
