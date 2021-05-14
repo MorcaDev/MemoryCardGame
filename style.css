@@ -28,7 +28,8 @@ body{
     height: inherit;
     display: flex;
     flex-flow: column nowrap;
-    background: linear-gradient(to bottom , rgba(0, 255, 255, 0.603) , rgba(0, 0, 0, 0.562));
+    background: url("./Sources/mainBackGround.png") no-repeat  center;
+    background-size: cover;
 
     visibility: initial;
 
@@ -49,10 +50,11 @@ body{
     padding: 10% 20px;
     border: solid white 6px;
     border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 .firstChart__description p{
     font-size: 1.5rem;
-    color:  black;
+    color:  white;
     line-height: 2rem;
     text-align: center;
 }
@@ -61,13 +63,13 @@ body{
     width: 65px;
     height: 85px;
     margin: 10px auto;
-    border: solid white 4px;
+    border: solid white 2px;
     border-radius: 50%;
-    background: url("./Sources/checkIMG.png") no-repeat center;
-    background-size: 100%;
+    background: url("./Sources/checkIMG.png") rgba(0, 0, 0, 0.8) no-repeat center;
+    background-size: 80%;
 }
 .button1st:hover{
-    border: solid black 4px;
+    box-shadow: 0px 0px 10px white
 }
 /*-------------------------------------------------*/
 .secondChart{
@@ -79,7 +81,9 @@ body{
     height: inherit; 
     display: flex;
     flex-flow: row nowrap;
-    background: linear-gradient(to bottom , rgba(0, 255, 255, 0.603) , rgba(0, 0, 0, 0.562));
+    background: url("./Sources/mainBackGround.png") no-repeat  center;
+    background-size: 100% 100%;
+
 
     visibility: hidden;
 
@@ -100,9 +104,10 @@ body{
     border: solid white 6px;
     border-radius: 20px;
     font-size: 1.5rem;
-    color:  black;
+    color:  white;
     line-height: 2rem;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 .button2nd{
     display: inline-block;
@@ -112,27 +117,15 @@ body{
     height: 85px;
     border: solid white 4px;
     border-radius: 50%;
-    background: url("./Sources/checkIMG.png") no-repeat center;
-    background-size: 100%;
+    background: url("./Sources/checkIMG.png") rgba(0, 0, 0, 0.8) no-repeat center;
+    background-size: 80%;
 }
 .button2nd:hover{
-    border: solid black 4px;
+    box-shadow: 0px 0px 10px white
 }
 .secondChart__column{
     width: 30%;
     height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-}
-.secondChart__column .whiteSpace{
-    width: 100%;
-    height: 50%;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-.secondChart__column .colorSpace{
-    width: 100%;
-    height: 60%;
 }
 /*----------------------------------------------------*/
 .therdChart{
@@ -144,7 +137,8 @@ body{
     height: inherit; 
     display: flex;
     flex-flow: row nowrap;
-    background: linear-gradient(to bottom , rgba(0, 255, 255, 0.603) , rgba(0, 0, 0, 0.562));
+    background: url("./Sources/mainBackGround.png") no-repeat  center;
+    background-size: 100% 100%;
 
     visibility: hidden;
 
@@ -161,12 +155,13 @@ body{
     margin-right:5%;
     width: 70%;
     padding: 10px;
-    border: solid white 6px;
+    border: solid white 4px;
     border-radius: 20px;
     font-size: 1.5rem;
-    color:  black;
+    color:  white;
     line-height: 2rem;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 .button3rd{
     display: inline-block;
@@ -176,64 +171,15 @@ body{
     height: 85px;
     border: solid white 4px;
     border-radius: 50%;
-    background: url("./Sources/checkIMG.png") no-repeat center;
-    background-size: 100%;
+    background: url("./Sources/checkIMG.png") rgba(0, 0, 0, 0.8) no-repeat center;
+    background-size: 80%;
 }
 .button3rd:hover{
-    border: solid black 4px;
+    box-shadow: 0px 0px 10px white
 }
 .therdChart__column{
     width: 30%;
     height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-}
-.therdChart__column .colorSpace{
-    width: 100%;
-    height: 60%;
-}
-.therdChart__column .whiteSpace{
-    width: 100%;
-    height: 40%;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-/*----------MEDIA QUERIES-----------*/
-
-@media (min-width:370px) {
-    .firstChart__description p{
-        font-size: 1.5rem;
-        line-height: 2rem;
-    }
-}
-@media (min-width:470px) {
-    .firstChart__description p{
-        font-size: 1.8rem;
-        line-height: 2.3rem;
-    }
-}
-@media (min-width:570px) {
-    .firstChart__description p{
-        font-size: 1.9rem;
-        line-height: 2.4rem;
-    }
-    .secondChart p{
-        font-size: 1.9rem;
-        line-height: 2.4rem;
-    }
-}   
-@media (min-width:900px) {
-    .firstChart__description{
-        padding: 5% 20px;
-    }
-    .firstChart__description p{
-        font-size: 3rem;
-        line-height: 3.5rem;
-    }
-    .therdChart__description p{
-        font-size: 2rem;
-        line-height: 2.5rem;
-    }
 }
 /*--------------------------------*/
 .game{
@@ -412,4 +358,42 @@ body{
     border: double white 6px;
     background-color: black;
     color: white;
+}
+
+/*----------MEDIA QUERIES-----------*/
+
+@media (min-width:370px) {
+    .firstChart__description p{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
+@media (min-width:470px) {
+    .firstChart__description p{
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+    }
+}
+@media (min-width:570px) {
+    .firstChart__description p{
+        font-size: 1.9rem;
+        line-height: 2.4rem;
+    }
+    .secondChart p{
+        font-size: 1.9rem;
+        line-height: 2.4rem;
+    }
+}   
+@media (min-width:900px) {
+    .firstChart__description{
+        padding: 5% 20px;
+    }
+    .firstChart__description p{
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+    .therdChart__description p{
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
 }

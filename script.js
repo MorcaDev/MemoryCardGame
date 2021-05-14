@@ -27,6 +27,7 @@ function close2(ev){
 
 function close3(ev){
     chart3.classList.remove("Apper");
+    
     gameID.classList.add("Apper");
     menuID.classList.add("Apper");
 }
