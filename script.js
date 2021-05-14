@@ -10,14 +10,18 @@ button1stChart.addEventListener("click",close1);
 
 function close1(ev){
     chart1.classList.add("Disapper");
+    chart2.classList.add("Apper");
+
     button2ndChart.addEventListener("click",close2);
 }
 
 function close2(ev){
-    chart2.classList.add("Disapper");
+    chart2.classList.remove("Apper");
+    chart3.classList.add("Apper");
+
     button3rdChart.addEventListener("click",close3);
 }
 
 function close3(ev){
-    chart3.classList.add("Disapper");
+    chart3.classList.remove("Apper");
 }

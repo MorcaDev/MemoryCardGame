@@ -14,7 +14,7 @@ body{
     margin: 0px auto;
     width: 100vw;
     height: 100vh;
-    background:  gray ;
+    background:  black ;
 }
 /*----------------------------------------------------------*/
 .firstChart{
@@ -27,6 +27,9 @@ body{
     display: flex;
     flex-flow: column nowrap;
     background: linear-gradient(to bottom , rgba(0, 255, 255, 0.603) , rgba(0, 0, 0, 0.562));
+
+    visibility: initial;
+
 }
 .myBrand{
     padding: 10px;
@@ -75,6 +78,9 @@ body{
     display: flex;
     flex-flow: row nowrap;
     background: linear-gradient(to bottom , rgba(0, 255, 255, 0.603) , rgba(0, 0, 0, 0.562));
+
+    visibility: hidden;
+
 }
 .secondChart__description{
     display: flex;
@@ -137,6 +143,9 @@ body{
     display: flex;
     flex-flow: row nowrap;
     background: linear-gradient(to bottom , rgba(0, 255, 255, 0.603) , rgba(0, 0, 0, 0.562));
+
+    visibility: hidden;
+
 }
 .therdChart__description{
     width: 70%;
@@ -187,11 +196,6 @@ body{
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
-
-/*-------------------------------------*/
-.Disapper{
-    display: none;
-}
 /*----------MEDIA QUERIES-----------*/
 
 @media (min-width:370px) {
@@ -228,4 +232,11 @@ body{
         font-size: 2rem;
         line-height: 2.5rem;
     }
+}
+/*-------------------------------------*/
+.Disapper{
+    visibility: hidden;
+}
+.Apper{
+    visibility: initial;
 }
