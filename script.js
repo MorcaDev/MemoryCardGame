@@ -8,6 +8,7 @@ let chart3 = document.getElementById("chartThree");
 
 let gameID = document.getElementById("gameID");
 let menuID = document.getElementById("menuID");
+let tempo = document.getElementById("timer");
 
 button1stChart.addEventListener("click",close1);
 
@@ -27,10 +28,11 @@ function close2(ev){
 
 function close3(ev){
     chart3.classList.remove("Apper");
-    
+
     gameID.classList.add("Apper");
     menuID.classList.add("Apper");
 }
+
 //game pieces
 let lvl1A = document.getElementById("lvl1A");
 let lvl1B = document.getElementById("lvl1B");
@@ -258,7 +260,13 @@ async function game(){
 
         showPieces();
 
-        await timer();
+        tempo.classList.add("SecondThree");
+
+        await second3();
+
+        await second2();
+
+        await second1();
 
         flipFrontPieces();
     
@@ -268,8 +276,14 @@ async function game(){
     }else if(lvl >= 2 && lvl <= 8){
         showPieces();
 
-        await timer();
-    
+        tempo.classList.add("SecondThree");
+
+        await second3();
+
+        await second2();
+
+        await second1();
+   
         flipFrontPieces();
         
         await flipReversePieces();
@@ -344,21 +358,32 @@ function showPieces(){
     }
 }
 
-function timer(){
+async function second3(){
     return new Promise((resolve,reject)=>{
-        setTimeout(() => {
-            console.log("3sg");
-        }, 0);
-        setTimeout(() => {
-            console.log("2sg");
-        }, 500);
-        setTimeout(() => {
-            console.log("1sg");
-        }, 1000);
-        setTimeout(() => {
-            console.log("///////////////");
+        setTimeout(()=>{
+            tempo.classList.remove("SecondThree");
+            tempo.classList.add("SecondTwo");
             resolve();
-        }, 1500);
+        },500);
+    });
+}
+
+async function second2(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            tempo.classList.remove("SecondTwo");
+            tempo.classList.add("SecondOne");
+            resolve();
+        },500);
+    });
+}
+
+async function second1(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            tempo.classList.remove("SecondOne");
+            resolve();
+        },500);
     });
 }
 

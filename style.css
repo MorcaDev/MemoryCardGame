@@ -29,7 +29,7 @@ body{
     display: flex;
     flex-flow: column nowrap;
     background: url("./Sources/mainBackGround.png") no-repeat  center;
-    background-size: cover;
+    background-size: 100% 100%;
 
     visibility: initial;
 
@@ -193,16 +193,14 @@ body{
     height: 100%;
     padding: 1%;
 }
-.game .count{
-    display: none;
+.count{
+    visibility: hidden;
+
     position: absolute;
-    top: 25%;
     left: 25%;
     width: 50%;
     height: 50%;
-    background: url("./Sources/3sgIMG.png") no-repeat center rgba(0, 0, 0, 0.568);
-    background-size: contain;
-    color: black;
+    top: 25%;
 }
 .game__piece{
     margin: 0px 1%;
@@ -347,6 +345,23 @@ body{
     background: url("./Sources/false.jpg")no-repeat center;
     background-size: 100% 100%;
     box-shadow: 0px 0px 20px black;
+}
+
+/* -> para el conteo regresivo*/
+.SecondOne{
+    visibility: initial;
+    background: url("./Sources/1sgIMG.png") no-repeat center;
+    background-size: contain;
+}
+.SecondTwo{
+    visibility: initial;
+    background: url("./Sources/2sgIMG.png") no-repeat center;
+    background-size: contain;
+}
+.SecondThree{
+    visibility: initial;
+    background: url("./Sources/3sgIMG.png") no-repeat center;
+    background-size: contain;
 }
 
 /* -> Para validación cards*/
