@@ -123,7 +123,12 @@ function printButtonS(ev){
 
         game();
     }else{
-        alert("choose a card please");
+        swal({
+            title: "Choose one Card, please",
+            text: "then, click START button",
+            icon: "info",
+            button: "got it"
+        });
         buttonS.classList.remove("PlusButton")
     }
 }
@@ -163,13 +168,21 @@ function printButtonNG(ev){
 
         deletingClasses();
 
-        question = confirm("Do you want to change your kind of cards?");
+        question = swal({
+                    title:"Do you want to cahnge you kind of cards?",
+                    buttons: ["Obviusly", "No"]
+                });
 
         if(question){
             cardsArray = [];
             clickNG = true;
 
-            alert("Choose one and then pick NEW GAME again");
+            swal({
+                title: "Choose One Card",
+                text: "then, click NEW GAME again",
+                icon: "info",
+                button: "got it"
+            });
 
             buttonNG.addEventListener("click",thereIsACard);
             buttonNG.removeEventListener("click",printButtonNG);
@@ -179,7 +192,12 @@ function printButtonNG(ev){
             game();
         }
     }else{
-        alert("you only can use this button for fail situations ")
+        swal({
+            title: "Only if you lose",
+            icon: "info",
+            button: "got it"
+          });
+          
         buttonNG.classList.remove("PlusButton")
     }
 
@@ -191,7 +209,12 @@ function thereIsACard(ev){
         buttonNG.classList.add("PlusButton");
         game();
     }else{
-        alert("Choose one please");
+        swal({
+            title: "Choose One Card",
+            Text: "then, click NEW GAME again",
+            icon: "warning",
+            button: "got it"
+        });
     }
 }
 
@@ -344,7 +367,12 @@ function addingEvents(){
 async function wrongAnswer(ev){
     await wrongRelation(ev);
 
-    console.log(`sorry you lose this level (${lvl})`)
+    swal({
+        title: "You're a loser",
+        icon: "error",
+        button: "T_T"
+      });
+
     derrote = true;
     lvl= 1;
     deletingEvents();
@@ -487,6 +515,10 @@ function deletingClasses(){
 }
 
 function winner(){
-    alert(`You are the winner`);
+    swal({
+        title: "You're the Winner!",
+        icon: "success",
+        button: "Good game",
+      });
     derrote = true;
 }
