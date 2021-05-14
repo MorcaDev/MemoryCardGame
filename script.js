@@ -6,6 +6,9 @@ let chart1 = document.getElementById("chartOne");
 let chart2 = document.getElementById("chartTwo");
 let chart3 = document.getElementById("chartThree");
 
+let gameID = document.getElementById("gameID");
+let menuID = document.getElementById("menuID");
+
 button1stChart.addEventListener("click",close1);
 
 function close1(ev){
@@ -24,6 +27,8 @@ function close2(ev){
 
 function close3(ev){
     chart3.classList.remove("Apper");
+    gameID.classList.add("Apper");
+    menuID.classList.add("Apper");
 }
 //game pieces
 let lvl1A = document.getElementById("lvl1A");

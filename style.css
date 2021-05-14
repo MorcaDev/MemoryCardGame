@@ -235,15 +235,11 @@ body{
         line-height: 2.5rem;
     }
 }
-/*-------------------------------------*/
-.Disapper{
-    visibility: hidden;
-}
-.Apper{
-    visibility: initial;
-}
 /*--------------------------------*/
 .game{
+
+    visibility: hidden;
+
     position: relative;
     display: flex;
     flex-flow: row wrap;
@@ -276,6 +272,9 @@ body{
     }
 /*--------------------------------*/
 .menu{
+
+    visibility: hidden;
+
     width: 33%;
     height: 100%;
 }
@@ -349,6 +348,14 @@ body{
     }
 
 /*clases a agregar desde JS*/
+
+/* -> for the introInterfaces*/
+.Disapper{
+    visibility: hidden;
+}
+.Apper{
+    visibility: initial;
+}
 
 /* -> para las piesas*/
 .InvisibiltyPieces{
