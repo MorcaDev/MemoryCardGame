@@ -19,7 +19,7 @@
 
     >Buttons
 
-![Gift]()
+![jpg]()
 
 - The game shows you many cards for a few seconds and then it hides them; you need to remember and click an specific kind of cards.
 
