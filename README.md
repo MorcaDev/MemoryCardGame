@@ -19,10 +19,11 @@
 
     >Buttons
 
-![jpg]()
-
 - The game shows you many cards for a few seconds and then it hides them; you need to remember and click an specific kind of cards.
 
 - In the V<sub>1.0</sub> there are only 8 levels.
 
-### **You can do it**
+- **You can do it**
+
+### **Thanks a lot**
+>![jpg](https://github.com/MorcaDev/MemoryCardGame/blob/test/Sources/like.jpg)
